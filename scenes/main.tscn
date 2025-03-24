@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://khm5jpuqm1da"]
+[gd_scene load_steps=15 format=3 uid="uid://khm5jpuqm1da"]
 
 [ext_resource type="Texture2D" uid="uid://lr3te70ikvjy" path="res://addons/kenney_prototype_textures/dark/texture_05.png" id="1_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://cxi246lmtgayt" path="res://addons/kenney_prototype_textures/orange/texture_09.png" id="2_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://c0fendex3mobs" path="res://addons/kenney_prototype_textures/purple/texture_09.png" id="3_tefeu"]
 [ext_resource type="Texture2D" uid="uid://8i1nh4aew0sm" path="res://addons/kenney_prototype_textures/green/texture_09.png" id="4_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bu2tc32umwrbu" path="res://scenes/player.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://deb0hgw7swldp" path="res://scenes/enemy.tscn" id="6_tefeu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tipki"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -22,6 +23,11 @@ glow_enabled = true
 fog_enabled = true
 fog_light_color = Color(1, 1, 1, 1)
 fog_density = 0.001
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_tbgi4"]
+vertices = PackedVector3Array(-3, 0.1, -10, -0.75, 0.1, -10.25, -0.75, 0.1, -499.5, -3.25, 0.1, -8.25, -499.5, 0.1, -499.5, -499.5, 0.1, -8.5, 0.75, 0.1, -10.25, 1, 0.1, -9.75, 499.5, 0.1, -9.75, 499.5, 0.1, -499.5, 1.25, 0.1, -6.5, 3.25, 0.1, 2.25, 4.25, 0.1, 2.25, 5, 0.1, 3.75, 499.5, 0.1, 3.75, -2.25, 3.1, -9, -2, 3.1, -6.75, 0.25, 3.1, -7, 0, 3.1, -9.25, -2, 0.1, -8.75, -1.75, 0.1, -7.25, -0.25, 0.1, -7.25, -0.25, 0.1, -9, -7, 0.1, 2.5, -5, 0.1, 2, -3, 0.1, -6.25, -7.75, 0.1, 3.75, -499.5, 0.1, 3.75, 1.25, 0.1, 3, 2.5, 0.1, 3, 1, 0.1, -6, -1, 0.1, -5.75, -0.75, 0.1, 4, 0.5, 0.1, 3.75, -4.5, 0.1, 2.25, -3.75, 0.1, 4.5, -1, 0.1, 4.75, -2.75, 0.1, -5.75, -6.5, 2.1, 3.5, -6, 2.1, 4.75, -5, 2.1, 4.25, -5.25, 2.1, 3.25, -6, 0.1, 3.75, -6, 0.1, 4.25, -5.5, 0.1, 4.25, -5.5, 0.1, 3.5, -6.75, 0.1, 5.75, -6, 0.1, 6, -499.5, 0.1, 499.5, -6, 0.1, 499.5, 4.5, 0.1, 4.5, 3, 0.1, 4.75, 0.25, 0.1, 6.25, 0.25, 0.1, 499.5, 499.5, 0.1, 499.5, -1, 0.1, 5.75, -4.25, 0.1, 5.25)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(6, 1, 2), PackedInt32Array(6, 2, 7), PackedInt32Array(7, 2, 8), PackedInt32Array(8, 2, 9), PackedInt32Array(12, 11, 10), PackedInt32Array(12, 10, 13), PackedInt32Array(13, 10, 7), PackedInt32Array(13, 7, 14), PackedInt32Array(14, 7, 8), PackedInt32Array(18, 17, 15), PackedInt32Array(15, 17, 16), PackedInt32Array(20, 19, 21), PackedInt32Array(21, 19, 22), PackedInt32Array(25, 24, 23), PackedInt32Array(23, 26, 25), PackedInt32Array(25, 26, 3), PackedInt32Array(3, 26, 27), PackedInt32Array(3, 27, 5), PackedInt32Array(29, 28, 11), PackedInt32Array(11, 28, 24), PackedInt32Array(11, 24, 31), PackedInt32Array(11, 31, 30), PackedInt32Array(33, 32, 28), PackedInt32Array(28, 32, 34), PackedInt32Array(28, 34, 24), PackedInt32Array(36, 35, 32), PackedInt32Array(32, 35, 34), PackedInt32Array(30, 10, 11), PackedInt32Array(24, 25, 37), PackedInt32Array(24, 37, 31), PackedInt32Array(40, 39, 41), PackedInt32Array(41, 39, 38), PackedInt32Array(43, 42, 44), PackedInt32Array(44, 42, 45), PackedInt32Array(27, 26, 46), PackedInt32Array(46, 47, 27), PackedInt32Array(27, 47, 49), PackedInt32Array(27, 49, 48), PackedInt32Array(51, 50, 52), PackedInt32Array(52, 50, 53), PackedInt32Array(53, 50, 14), PackedInt32Array(53, 14, 54), PackedInt32Array(50, 13, 14), PackedInt32Array(36, 55, 35), PackedInt32Array(35, 55, 56), PackedInt32Array(55, 52, 56), PackedInt32Array(56, 52, 47), PackedInt32Array(47, 52, 53), PackedInt32Array(47, 53, 49)]
+cell_height = 0.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya4ey"]
 albedo_texture = ExtResource("1_jyhfs")
@@ -46,44 +52,78 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_choun")
 
-[node name="map" type="Node3D" parent="."]
+[node name="Player" parent="." instance=ExtResource("5_tbgi4")]
 
-[node name="floor" type="CSGBox3D" parent="map"]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_tbgi4")
+
+[node name="map" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="floor" type="CSGBox3D" parent="NavigationRegion3D/map"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 material_override = SubResource("StandardMaterial3D_ya4ey")
 use_collision = true
 size = Vector3(1000, 1, 1000)
 
-[node name="box1" type="CSGBox3D" parent="map"]
+[node name="box1" type="CSGBox3D" parent="NavigationRegion3D/map"]
 transform = Transform3D(0.860689, 0, 0.509132, 0, 1, 0, -0.509132, 0, 0.860689, 3.63793, 0.5, 3.45613)
 material_override = SubResource("StandardMaterial3D_eb6dy")
 use_collision = true
 
-[node name="box4" type="CSGBox3D" parent="map"]
+[node name="box4" type="CSGBox3D" parent="NavigationRegion3D/map"]
 transform = Transform3D(0.860689, 0, 0.509132, 0, 1, 0, -0.509132, 0, 0.860689, 1.75062, 1.17886, 4.25831)
 material_override = SubResource("StandardMaterial3D_eb6dy")
 use_collision = true
 
-[node name="box5" type="CSGBox3D" parent="map"]
-transform = Transform3D(0.860689, 0, 0.509132, 0, 1, 0, -0.509132, 0, 0.860689, 0.197754, 1.67719, 5.02552)
+[node name="box5" type="CSGBox3D" parent="NavigationRegion3D/map"]
+transform = Transform3D(0.860689, 0, 0.509132, 0, 1, 0, -0.509132, 0, 0.860689, 0.197754, 1.96777, 5.02552)
 material_override = SubResource("StandardMaterial3D_eb6dy")
 use_collision = true
 
-[node name="box6" type="CSGBox3D" parent="map"]
-transform = Transform3D(0.860689, 0, 0.509132, 0, 1, 0, -0.509132, 0, 0.860689, -2.13685, 1.67719, 4.26802)
+[node name="box6" type="CSGBox3D" parent="NavigationRegion3D/map"]
+transform = Transform3D(0.860689, 0, 0.509132, 0, 1, 0, -0.509132, 0, 0.860689, -2.13685, 2.63683, 4.26802)
 material_override = SubResource("StandardMaterial3D_eb6dy")
 use_collision = true
 
-[node name="box2" type="CSGBox3D" parent="map"]
+[node name="box2" type="CSGBox3D" parent="NavigationRegion3D/map"]
 transform = Transform3D(0.860689, 0, 0.509132, 0, 1, 0, -0.509132, 0, 0.860689, -5.7155, 1, 3.92553)
 material_override = SubResource("StandardMaterial3D_trceg")
 use_collision = true
 size = Vector3(2, 2, 2)
 
-[node name="box3" type="CSGBox3D" parent="map"]
+[node name="box3" type="CSGBox3D" parent="NavigationRegion3D/map"]
 transform = Transform3D(0.998599, 0, 0.0529111, 0, 1, 0, -0.0529111, 0, 0.998599, -1.02134, 1.5, -8.02076)
 material_override = SubResource("StandardMaterial3D_a8y0u")
 use_collision = true
 size = Vector3(3, 3, 3)
 
-[node name="Player" parent="." instance=ExtResource("5_tbgi4")]
+[node name="IdleTarget" type="Node3D" parent="."]
+transform = Transform3D(-0.532492, 0, -0.846435, 0, 1, 0, 0.846435, 0, -0.532492, -2.79237, 0, -3.3794)
+
+[node name="Enemy" parent="." instance=ExtResource("6_tefeu")]
+transform = Transform3D(-0.532492, 0, -0.846435, 0, 1, 0, 0.846435, 0, -0.532492, -2.79237, 0, -2.31397)
+
+[node name="Skeleton3D" parent="Enemy/Visuals/Skeleton_Minion/Rig" index="0"]
+bones/1/position = Vector3(0, 0.189162, 0)
+bones/4/rotation = Quaternion(-0.551884, -0.0626923, -0.656751, 0.510071)
+bones/5/rotation = Quaternion(1.25971e-08, -4.85068e-08, -0.476741, 0.879044)
+bones/7/rotation = Quaternion(-0.316673, -0.329818, 0.134212, 0.879162)
+bones/8/rotation = Quaternion(0.00166277, 0.00166276, -0.700975, 0.713182)
+bones/9/rotation = Quaternion(-0.611377, 0.0828136, 0.629641, 0.472137)
+bones/10/rotation = Quaternion(2.72026e-08, 4.808e-08, 0.500791, 0.865568)
+bones/12/rotation = Quaternion(-0.315307, 0.303952, -0.215937, 0.872678)
+bones/13/rotation = Quaternion(0.00429317, 0.00505672, 0.702628, 0.711527)
+bones/15/rotation = Quaternion(0.991549, 0.083189, 0.077149, 0.0629135)
+bones/16/rotation = Quaternion(0.331327, 5.79547e-08, -2.32315e-07, 0.943516)
+bones/17/rotation = Quaternion(-0.588155, -0.204351, 0.0654052, 0.779767)
+bones/18/rotation = Quaternion(1.32927e-05, 0.920169, -0.39152, -2.96341e-06)
+bones/19/rotation = Quaternion(0.99388, -0.0319078, 0.0304092, 0.10129)
+bones/20/rotation = Quaternion(0.382893, -6.09293e-08, 2.67811e-07, 0.923793)
+bones/21/rotation = Quaternion(-0.617139, 0.113424, -0.018069, 0.778427)
+bones/38/position = Vector3(0.26042, 0.384478, -0.0288187)
+bones/40/position = Vector3(-0.255422, 0.384478, 0.0298685)
+
+[node name="EnemyIdle" parent="Enemy/StateMachine" index="0" node_paths=PackedStringArray("idle_spot")]
+idle_spot = NodePath("../../../IdleTarget")
+
+[editable path="Enemy"]

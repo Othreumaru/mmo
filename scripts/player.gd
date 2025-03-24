@@ -4,6 +4,7 @@ extends CharacterBody3D
 @export var mage: Node3D
 @export var spring_arm: Node3D
 @export var rotation_speed: float = 12
+@export var max_jumps:= 2
 
 @onready var animation_tree = $AnimationTree
 @onready var animation_state = $AnimationTree.get("parameters/playback")
@@ -13,15 +14,20 @@ const JUMP_VELOCITY = 5
 
 var jumping: bool = false
 var last_floor: bool = false
+var jumps:= max_jumps
 	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		
+	if is_on_floor():
+		jumps = max_jumps
 
 	# Handle jump.
-	if is_on_floor() && Input.is_action_just_pressed("jump"):
+	if jumps && Input.is_action_just_pressed("jump"):
+		jumps = jumps - 1
 		velocity.y = JUMP_VELOCITY
 		jumping = true
 		animation_tree.set("parameters/conditions/jumping", true)
