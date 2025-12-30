@@ -8,6 +8,10 @@ func _ready() -> void:
 	start_server_button.pressed.connect(_on_server_button_pressed)
 	start_client_button.pressed.connect(_on_client_button_pressed)
 
+	var args = Array(OS.get_cmdline_args())
+	if args.has("-s"):
+		_on_server_button_pressed()
+
 func get_server_and_port(host_text: String) -> Array[String]:
 	if host_text.find(":") != -1:
 		var array: Array[String]
