@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-NetworkHandler="*uid://dhj4skog3k37p"
-ClientNetworkGlobals="*uid://deepr73kbqrbs"
-ServerNetworkGlobals="*uid://wds0oqhvbkf4"
+NetworkHandler="*res://entities/network/network_handler.gd"
+ClientNetworkGlobals="*res://entities/network/client_network_globals.gd"
+ServerNetworkGlobals="*res://entities/network/server_network_globals.gd"
 
 [input]
 
