@@ -115,4 +115,5 @@ func _physics_process(delta: float) -> void:
 		
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("melee_atack"):
-		animation_state.travel("1H_Melee_Attack_Chop")
+		pass
+		# animation_state.travel("1H_Melee_Attack_Chop")
