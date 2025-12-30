@@ -11,12 +11,12 @@ extends CharacterBody3D
 @onready var animation_tree = $AnimationTree
 @onready var animation_state = $AnimationTree.get("parameters/playback")
 
-var owner_id: int
-
 const SPEED = 3.0
 const JUMP_VELOCITY = 5
 const FOLLOW_LERP_SPEED: float = 8.0
 
+var owner_id: int
+var last_network_position: Vector3 = Vector3.ZERO
 var jumping: bool = false
 var last_floor: bool = false
 var jumps:= max_jumps
@@ -48,8 +48,18 @@ func on_client_player_position_updated(player_position: PlayerPosition) -> void:
 	if is_authority || owner_id != player_position.id:
 		return
 
-	# global_position = player_position.position
+	var move_vector = player_position.position - last_network_position
+	last_network_position = player_position.position
+
 	global_position = global_position.lerp(player_position.position, FOLLOW_LERP_SPEED * get_process_delta_time())
+
+	if move_vector.length() > 0:
+		var normalized_move_vector = move_vector.normalized()
+		var blend_vector = Vector2(normalized_move_vector.x, normalized_move_vector.z).rotated(-rotation.y)
+		animation_tree.set("parameters/IWR/blend_position", blend_vector) 
+	else:
+		animation_tree.set("parameters/IWR/blend_position", Vector2.ZERO)
+
 	rotation.y = lerp_angle(rotation.y, player_position.rotation, FOLLOW_LERP_SPEED * get_process_delta_time())
 
 func _physics_process(delta: float) -> void:
