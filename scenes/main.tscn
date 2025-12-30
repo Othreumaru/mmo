@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c0fendex3mobs" path="res://addons/kenney_prototype_textures/purple/texture_09.png" id="3_tefeu"]
 [ext_resource type="Texture2D" uid="uid://8i1nh4aew0sm" path="res://addons/kenney_prototype_textures/green/texture_09.png" id="4_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bu2tc32umwrbu" path="res://entities/player/player.tscn" id="5_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://deb0hgw7swldp" path="res://scenes/enemy.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://deb0hgw7swldp" path="res://entities/enemy/enemy.tscn" id="6_tefeu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tipki"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
