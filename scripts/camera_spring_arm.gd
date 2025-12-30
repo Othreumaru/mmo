@@ -7,14 +7,25 @@ extends Node3D
 
 @onready var spring_arm_3d: SpringArm3D = $SpringArm3D
 
+var is_camera_moving = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	pass # Replace with function body.
 
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MouseButton.MOUSE_BUTTON_LEFT and event.is_pressed():
+			is_camera_moving = true
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		elif event.button_index == MouseButton.MOUSE_BUTTON_LEFT and !event.is_pressed():
+			is_camera_moving = false
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _unhandled_input(event: InputEvent) -> void:
+	if !is_camera_moving:
+		return
 	if event is InputEventMouseMotion:
 		rotation.y -= event.relative.x * mouse_sensitivity
 		rotation.y = wrapf(rotation.y,0.0, TAU)
