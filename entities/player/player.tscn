@@ -31661,7 +31661,6 @@ bone_idx = 9
 [node name="Spellbook" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D/Spellbook" unique_id=1166189692]
 visible = false
 mesh = SubResource("ArrayMesh_w055x")
-skeleton = NodePath("")
 
 [node name="Spellbook_open" type="BoneAttachment3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=873510716]
 transform = Transform3D(6.557027e-08, 0.96483207, 0.262865, -0.9999993, 1.1790073e-06, -2.9521544e-07, -1.0204327e-06, -0.26286432, 0.9648317, 0.27299348, 0.3183524, 0.060876682)
@@ -31670,7 +31669,6 @@ bone_idx = 10
 
 [node name="Spellbook_open" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D/Spellbook_open" unique_id=2116944071]
 mesh = SubResource("ArrayMesh_mmli1")
-skeleton = NodePath("")
 
 [node name="1H_Wand" type="BoneAttachment3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=1914285687]
 transform = Transform3D(-9.981649e-09, -0.14989397, 0.9887016, 0.9999994, -9.2106507e-07, -1.1026859e-06, 1.5141127e-06, 0.98870116, 0.1498936, -0.24553098, 0.3205146, 0.05329777)
@@ -31679,7 +31677,6 @@ bone_idx = 16
 
 [node name="1H_Wand" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D/1H_Wand" unique_id=1046129140]
 mesh = SubResource("ArrayMesh_def3x")
-skeleton = NodePath("")
 
 [node name="2H_Staff" type="BoneAttachment3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=1465280228]
 transform = Transform3D(-9.981649e-09, -0.14989397, 0.9887016, 0.9999994, -9.2106507e-07, -1.1026859e-06, 1.5141127e-06, 0.98870116, 0.1498936, -0.24553098, 0.3205146, 0.05329777)
@@ -31688,7 +31685,6 @@ bone_idx = 17
 
 [node name="2H_Staff" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D/2H_Staff" unique_id=564926908]
 mesh = SubResource("ArrayMesh_e4677")
-skeleton = NodePath("")
 
 [node name="Mage_Hat" type="BoneAttachment3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=828578589]
 transform = Transform3D(0.9997204, -0.0061202417, 0.022841085, 1.3934272e-09, 0.96592593, 0.25881866, -0.023646828, -0.2587463, 0.96565586, -3.7421124e-09, 0.88524973, -5.1239535e-08)
@@ -31697,7 +31693,6 @@ bone_idx = 19
 
 [node name="Mage_Hat" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D/Mage_Hat" unique_id=1521479975]
 mesh = SubResource("ArrayMesh_qgpea")
-skeleton = NodePath("")
 
 [node name="Mage_Cape" type="BoneAttachment3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=1240065405]
 transform = Transform3D(0.9962748, -5.1496194e-09, 0.08623545, 5.1304365e-09, 1, 4.4407827e-10, -0.08623545, 1.463736e-15, 0.9962748, -6.4984844e-09, 0.6011368, -5.0975697e-08)
@@ -31707,31 +31702,36 @@ bone_idx = 20
 [node name="Mage_Cape" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D/Mage_Cape" unique_id=494100804]
 visible = false
 mesh = SubResource("ArrayMesh_5t5k8")
-skeleton = NodePath("")
 
 [node name="Mage_ArmLeft" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=924646074]
 mesh = SubResource("ArrayMesh_ct7tq")
 skin = SubResource("Skin_e4yup")
+skeleton = NodePath("..")
 
 [node name="Mage_ArmRight" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=6434323]
 mesh = SubResource("ArrayMesh_2w18s")
 skin = SubResource("Skin_e4yup")
+skeleton = NodePath("..")
 
 [node name="Mage_Body" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=470230651]
 mesh = SubResource("ArrayMesh_7yqml")
 skin = SubResource("Skin_e4yup")
+skeleton = NodePath("..")
 
 [node name="Mage_Head" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=132989907]
 mesh = SubResource("ArrayMesh_qs02i")
 skin = SubResource("Skin_e4yup")
+skeleton = NodePath("..")
 
 [node name="Mage_LegLeft" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=131198956]
 mesh = SubResource("ArrayMesh_cc680")
 skin = SubResource("Skin_e4yup")
+skeleton = NodePath("..")
 
 [node name="Mage_LegRight" type="MeshInstance3D" parent="Visuals/Mage/Rig/Skeleton3D" unique_id=1465287118]
 mesh = SubResource("ArrayMesh_8u8f5")
 skin = SubResource("Skin_e4yup")
+skeleton = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Visuals/Mage" unique_id=783713051]
 libraries/ = SubResource("AnimationLibrary_cf50b")

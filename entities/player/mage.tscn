@@ -4,7 +4,7 @@
 
 [node name="Mage" unique_id=1867694956 instance=ExtResource("1_j2dsb")]
 
-[node name="Skeleton3D" parent="Rig" parent_id_path=PackedInt32Array(1497988891) index="0" unique_id=773841832]
+[node name="Skeleton3D" parent="Rig" parent_id_path=PackedInt32Array(609914007) index="0" unique_id=2087721971]
 bones/1/position = Vector3(0, 0.19603191, 0)
 bones/1/rotation = Quaternion(-1.11122625e-10, 0.043157753, 2.5724098e-09, 0.9990683)
 bones/2/rotation = Quaternion(-6.938893e-18, 7.1054274e-15, 4.93038e-32, 1)
@@ -54,23 +54,23 @@ bones/45/rotation = Quaternion(-0.7071068, -7.279511e-08, -7.279509e-08, 0.70710
 bones/46/position = Vector3(-0.25542185, 0.39415607, 0.029868461)
 bones/46/rotation = Quaternion(-0.7582528, -1.527369e-07, 0.65196073, -1.1175871e-08)
 
-[node name="Spellbook" parent="Rig/Skeleton3D" index="0" unique_id=1526245845]
+[node name="Spellbook" parent="Rig/Skeleton3D" index="0" unique_id=1003257799]
 transform = Transform3D(-2.230289e-08, 0.9648325, 0.26286295, -0.99999917, 3.1473982e-07, -3.8462252e-07, -5.9249146e-07, -0.2628631, 0.9648326, 0.28881064, 0.31835246, 0.11893651)
 
-[node name="Spellbook" parent="Rig/Skeleton3D/Spellbook" index="0" unique_id=1051746384]
+[node name="Spellbook" parent="Rig/Skeleton3D/Spellbook" index="0" unique_id=1334257956]
 visible = false
 
-[node name="Spellbook_open" parent="Rig/Skeleton3D" index="1" unique_id=1174538259]
+[node name="Spellbook_open" parent="Rig/Skeleton3D" index="1" unique_id=76220135]
 transform = Transform3D(-2.230289e-08, 0.9648325, 0.26286295, -0.99999917, 3.1473982e-07, -3.8462252e-07, -5.9249146e-07, -0.2628631, 0.9648326, 0.27299267, 0.3183525, 0.060877018)
 
-[node name="1H_Wand" parent="Rig/Skeleton3D" index="2" unique_id=1132672774]
+[node name="1H_Wand" parent="Rig/Skeleton3D" index="2" unique_id=331390433]
 transform = Transform3D(-4.0934526e-07, -0.14989422, 0.9887013, 0.99999905, -1.1640157e-07, 8.940696e-08, 4.8727884e-07, 0.98870134, 0.14989448, -0.24553044, 0.32051477, 0.05329791)
 
-[node name="2H_Staff" parent="Rig/Skeleton3D" index="3" unique_id=1463477696]
+[node name="2H_Staff" parent="Rig/Skeleton3D" index="3" unique_id=109991724]
 transform = Transform3D(-4.0934526e-07, -0.14989422, 0.9887013, 0.99999905, -1.1640157e-07, 8.940696e-08, 4.8727884e-07, 0.98870134, 0.14989448, -0.24553044, 0.32051477, 0.05329791)
 
-[node name="Mage_Hat" parent="Rig/Skeleton3D" index="4" unique_id=47824827]
+[node name="Mage_Hat" parent="Rig/Skeleton3D" index="4" unique_id=971184095]
 transform = Transform3D(0.9997204, -0.0061201924, 0.022840858, 1.3934147e-09, 0.96592575, 0.25881907, -0.023646597, -0.25874674, 0.96565574, -3.7420973e-09, 0.88525033, -5.1239518e-08)
 
-[node name="Mage_Cape" parent="Rig/Skeleton3D" index="5" unique_id=752916691]
+[node name="Mage_Cape" parent="Rig/Skeleton3D" index="5" unique_id=1397175709]
 transform = Transform3D(0.9962748, -5.1496167e-09, 0.08623532, 5.1304343e-09, 0.99999994, 4.4407705e-10, -0.08623532, 1.8800718e-15, 0.9962748, -6.4984773e-09, 0.60113704, -5.0975682e-08)
