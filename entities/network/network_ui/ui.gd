@@ -21,7 +21,7 @@ func get_server_and_port(host_text: String) -> Array[String]:
 
 func _on_server_button_pressed() -> void:
 	var server_and_port = get_server_and_port(host_input.text)
-	NetworkHandler.start_server(server_and_port[0], int(server_and_port[1]))
+	NetworkHandler.start_server("0.0.0.0", int(server_and_port[1]))
 	start_server_button.release_focus()
 
 

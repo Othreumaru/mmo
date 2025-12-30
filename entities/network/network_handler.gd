@@ -87,7 +87,7 @@ func disconnected_from_server() -> void:
 	on_disconnected_from_server.emit()
 	connection = null
 
-func start_server(ip_address: String = "127.0.0.1", port: int = 42069) -> void:
+func start_server(ip_address: String = "0.0.0.0", port: int = 42069) -> void:
 	connection = ENetConnection.new()
 	var error: Error = connection.create_host_bound(ip_address, port)
 	if error:
