@@ -32,7 +32,17 @@ func _update_editor_preview() -> void:
 
 
 func spawn_player(id: int) -> void:
+	if PLAYER_SCENE == null:
+		push_error("PLAYER_SCENE is not set")
+		return
+
+	var network_player: NetworkPlayer = NetworkPlayer.new()
+	network_player.name = "NetworkPlayer: " + str(id)
+	network_player.owner_id = id
+
 	var player = PLAYER_SCENE.instantiate()
-	player.owner_id = id
-	player.name = str(id)
-	call_deferred("add_child", player)
+	player.name = "Player: " + str(id)
+	
+	network_player.player = player
+	network_player.add_child(player)
+	call_deferred("add_child", network_player)
