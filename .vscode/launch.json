@@ -1,0 +1,52 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "GDScript: Launch Server",
+            "type": "godot",
+            "request": "launch",
+            "project": "${workspaceFolder}",
+            "debug_collisions": false,
+            "debug_paths": false,
+            "debug_navigation": false,
+            "additional_options": "-s",
+            "suppressMultipleSessionWarning": true
+        },
+        {
+            "name": "GDScript: Launch Client 1",
+            "type": "godot",
+            "request": "launch",
+            "project": "${workspaceFolder}",
+            "debug_collisions": false,
+            "debug_paths": false,
+            "debug_navigation": false,
+            "additional_options": "-c 1",
+            "suppressMultipleSessionWarning": true
+        },
+        {
+            "name": "GDScript: Launch Client 2",
+            "type": "godot",
+            "request": "launch",
+            "project": "${workspaceFolder}",
+            "debug_collisions": false,
+            "debug_paths": false,
+            "debug_navigation": false,
+            "additional_options": "-c 2",
+            "suppressMultipleSessionWarning": true
+        },
+    ],
+    "compounds": [
+        {
+            "name": "GDScript: Multiple Instance",
+            "configurations": [
+                "GDScript: Launch Server",
+                "GDScript: Launch Client 1",
+                "GDScript: Launch Client 2"
+            ],
+            "stopAll": true
+        }
+    ]   
+}

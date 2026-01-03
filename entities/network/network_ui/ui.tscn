@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ckapq48dk1m87" path="res://entities/network/network_ui/ui.gd" id="1_nt7q6"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_kegan"]
+font_color = Color(0, 0, 0, 1)
+
 [node name="UI" type="Control" unique_id=299043315]
 layout_mode = 3
 anchors_preset = 15
@@ -15,6 +18,12 @@ script = ExtResource("1_nt7q6")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=2077903546]
+unique_name_in_owner = true
+layout_mode = 2
+text = "..."
+label_settings = SubResource("LabelSettings_kegan")
 
 [node name="HostInput" type="LineEdit" parent="VBoxContainer" unique_id=1636725771]
 unique_name_in_owner = true

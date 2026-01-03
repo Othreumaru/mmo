@@ -9,14 +9,20 @@ extends Node3D
 		if Engine.is_editor_hint():
 			_update_editor_preview()
 
+var player_manager: NetworkPlayerManager
+
 func _ready() -> void:
+	if !Engine.is_editor_hint():
+		player_manager = NetworkPlayerManager.new()
+		player_manager.name = "NetworkPlayerManager"
+		add_child(player_manager)
 	if Engine.is_editor_hint():
 		_update_editor_preview()
 		return
 
-	NetworkHandler.on_peer_connected.connect(spawn_player)
-	ClientNetworkGlobals.on_id_assigned.connect(spawn_player)
-	ClientNetworkGlobals.on_remote_id_assigned.connect(spawn_player)
+	NetworkHandler.on_peer_connected.connect(spawn_non_authoritative_player_on_server)
+	ClientNetworkGlobals.on_id_assigned.connect(spawn_authoritative_player_on_client)
+	ClientNetworkGlobals.on_remote_id_assigned.connect(spawn_non_authoritative_player_on_client)
 
 
 func _update_editor_preview() -> void:
@@ -31,18 +37,30 @@ func _update_editor_preview() -> void:
 	add_child(player)
 
 
-func spawn_player(id: int) -> void:
+func spawn_non_authoritative_player_on_server(id: int) -> void:
+	var player = spawn_player(id)
+	var controller = ServerNonAuthoritativeEntityController.new(id, player_manager, player)
+	add_child(controller)
+
+
+func spawn_authoritative_player_on_client(id: int) -> void:
+	var player = spawn_player(id)
+	var controller = ClientAuthoritativeEntityController.new(id, player_manager, player)
+	add_child(controller)
+
+
+func spawn_non_authoritative_player_on_client(id: int) -> void:
+	var player = spawn_player(id)
+	var controller = ClientNonAuthoritativeEntityController.new(id, player_manager, player)
+	add_child(controller)
+
+func spawn_player(id: int) -> Player:
 	if PLAYER_SCENE == null:
 		push_error("PLAYER_SCENE is not set")
 		return
 
-	var network_player: NetworkPlayer = NetworkPlayer.new()
-	network_player.name = "NetworkPlayer: " + str(id)
-	network_player.owner_id = id
-
 	var player = PLAYER_SCENE.instantiate()
 	player.name = "Player: " + str(id)
 	
-	network_player.player = player
-	network_player.add_child(player)
-	call_deferred("add_child", network_player)
+	call_deferred("add_child", player)
+	return player

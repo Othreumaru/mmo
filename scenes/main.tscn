@@ -108,5 +108,11 @@ material_override = SubResource("StandardMaterial3D_a8y0u")
 use_collision = true
 size = Vector3(3, 3, 3)
 
+[node name="box7" type="CSGBox3D" parent="NavigationRegion3D/map" unique_id=468318119]
+transform = Transform3D(0.860689, 0, 0.509132, 0, 1, 0, -0.509132, 0, 0.860689, -3.8773942, 2.63683, 0.6621692)
+material_override = SubResource("StandardMaterial3D_eb6dy")
+use_collision = true
+size = Vector3(2, 1, 4)
+
 [node name="IdleTarget" type="Node3D" parent="." unique_id=1614191006]
 transform = Transform3D(-0.532492, 0, -0.846435, 0, 1, 0, 0.846435, 0, -0.532492, -2.79237, 0, -3.3794)
