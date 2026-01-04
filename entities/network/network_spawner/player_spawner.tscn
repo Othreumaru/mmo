@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbvtshepk83jq"]
 
-[ext_resource type="Script" uid="uid://beogm6n06r8np" path="res://entities/network/player_spawner/player_spawner.gd" id="1_g8com"]
+[ext_resource type="Script" uid="uid://beogm6n06r8np" path="res://entities/network/network_spawner/player_spawner.gd" id="1_g8com"]
 
 [node name="PlayerSpawner" type="Node3D" unique_id=1610358410]
 script = ExtResource("1_g8com")

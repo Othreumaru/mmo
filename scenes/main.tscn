@@ -3,12 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://lr3te70ikvjy" path="res://addons/kenney_prototype_textures/dark/texture_05.png" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dbkinmhnehcup" path="res://entities/network/network_ui/ui.tscn" id="1_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://cxi246lmtgayt" path="res://addons/kenney_prototype_textures/orange/texture_09.png" id="2_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://dbvtshepk83jq" path="res://entities/network/player_spawner/player_spawner.tscn" id="2_tipki"]
+[ext_resource type="PackedScene" uid="uid://dbvtshepk83jq" path="res://entities/network/network_spawner/player_spawner.tscn" id="2_tipki"]
 [ext_resource type="Texture2D" uid="uid://c0fendex3mobs" path="res://addons/kenney_prototype_textures/purple/texture_09.png" id="3_tefeu"]
-[ext_resource type="PackedScene" uid="uid://cje2pfbvis6oa" path="res://entities/network/enemy_spawner/enemy_spawner.tscn" id="4_85g3d"]
+[ext_resource type="PackedScene" uid="uid://cje2pfbvis6oa" path="res://entities/network/network_spawner/enemy_spawner.tscn" id="4_85g3d"]
 [ext_resource type="Texture2D" uid="uid://8i1nh4aew0sm" path="res://addons/kenney_prototype_textures/green/texture_09.png" id="4_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bu2tc32umwrbu" path="res://entities/player/player.tscn" id="5_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://deb0hgw7swldp" path="res://entities/enemy/enemy.tscn" id="6_tefeu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tipki"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -63,7 +62,6 @@ PLAYER_SCENE = ExtResource("5_tbgi4")
 
 [node name="EnemySpawner" parent="." unique_id=750784862 instance=ExtResource("4_85g3d")]
 transform = Transform3D(-0.9932458, 0, 0.11602926, 0, 1, 0, -0.11602926, 0, -0.9932458, 0.20491743, 0, -3.5417895)
-ENEMY_SCENE = ExtResource("6_tefeu")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=590877136]
 navigation_mesh = SubResource("NavigationMesh_tbgi4")

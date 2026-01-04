@@ -3,7 +3,8 @@ class_name Packet
 enum PACKET_TYPE {
 	ID_ASSIGNMENT,
 	PLAYER_POSITION,
-	ENEMY_POSITION
+	ENEMY_POSITION,
+	ENEMY_SPAWN
 }
 
 var packet_type: PACKET_TYPE

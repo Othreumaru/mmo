@@ -1,6 +1,8 @@
 extends Node
 
 signal on_player_position(peer_id: int, player_position: PlayerPosition)
+signal on_enemy_position(peer_id: int, enemy_position: EnemyPosition)
+signal on_enemy_spawn_request(peer_id: int, enemy_spawn: EnemySpawn)
 
 var peer_ids: Array[int]
 
@@ -26,5 +28,11 @@ func on_server_packet(peer_id: int, data: PackedByteArray) -> void:
 		Packet.PACKET_TYPE.PLAYER_POSITION:
 			var packet: PlayerPosition = PlayerPosition.create_from_data(data)
 			on_player_position.emit(peer_id, packet)
+		Packet.PACKET_TYPE.ENEMY_POSITION:
+			var packet: EnemyPosition = EnemyPosition.create_from_data(data)
+			on_enemy_position.emit(peer_id, packet)
+		Packet.PACKET_TYPE.ENEMY_SPAWN:
+			var packet: EnemySpawn = EnemySpawn.create_from_data(data)
+			on_enemy_spawn_request.emit(peer_id, packet)
 		_:
 			print("Unknown packet type received from peer %d: %d" % [peer_id, packet_type])
